@@ -38,7 +38,9 @@ src/
       NftPreview.tsx
 
     wallet/
-      (wallet UI components if added later)
+       ConnectWallet.tsx
+       WalletAccount.tsx
+       WalletOptions.tsx
 
   context/
     NftViewerContext.tsx

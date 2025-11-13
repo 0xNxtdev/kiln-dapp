@@ -1,0 +1,60 @@
+@import "tailwindcss";
+
+@layer base {
+	p,
+	span {
+		color: #6A7282;
+	}
+
+	button {
+		@apply cursor-pointer transition hover:opacity-90;
+	}
+}
+
+@layer components {
+	.btn-primary {
+		@apply bg-[#171717] text-white w-full h-10 rounded-sm
+		font-normal text-sm flex items-center justify-center
+		shadow-[0_1px_2px_rgba(0,0,0,0.09)];
+	}
+
+	.btn-primary-icon {
+		@apply bg-[#171717] text-white w-full h-10 rounded-sm
+		font-normal text-sm flex items-center justify-between px-4
+		shadow-[0_1px_2px_rgba(0,0,0,0.09)];
+	}
+
+	.btn-primary:disabled {
+		@apply opacity-60 cursor-not-allowed grayscale;
+	}
+}
+
+@layer utilities {
+	.animate-modal {
+		animation: modal-in 0.15s ease-out forwards;
+	}
+
+	.animate-backdrop {
+		animation: backdrop-in 0.15s ease-out forwards;
+	}
+
+	@keyframes modal-in {
+		0% {
+			opacity: 0;
+			transform: scale(0.95);
+		}
+		100% {
+			opacity: 1;
+			transform: scale(1);
+		}
+	}
+
+	@keyframes backdrop-in {
+		0% {
+			opacity: 0;
+		}
+		100% {
+			opacity: 1;
+		}
+	}
+}
